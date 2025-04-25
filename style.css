@@ -1,0 +1,44 @@
+body {
+  background-color: #f7f9fc; /* Un gris très pâle bleuâtre, doux pour les yeux */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+  
+  nav {
+    background-color: #004466;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  h1, h2 {
+    color: #004466;
+  }
+
+  .banniere {
+    background-image: url("images.jfif"); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .banniere h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .banniere p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  

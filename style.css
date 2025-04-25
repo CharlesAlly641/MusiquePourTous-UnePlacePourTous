@@ -1,5 +1,5 @@
 body {
-  background-color: #f7f9fc; /* Un gris très pâle bleuâtre, doux pour les yeux */
+  background-color: #ffffff; /* Un gris très pâle bleuâtre, doux pour les yeux */
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
@@ -18,11 +18,15 @@ body {
   }
   
   h1, h2 {
-    color: #004466;
+    color: #000000;
+  }
+
+  .banniere h1 {
+    color: #ffffff; /* Par exemple, une couleur jaune pour le nom dans la bannière */
   }
 
   .banniere {
-    background-image: url("images.jfif"); /* Remplace par ton image */
+    background-image: url("banniere.jfif"); /* Remplace par ton image */
     background-size: cover;
     background-position: center;
     color: white;
@@ -40,5 +44,37 @@ body {
     font-size: 1.2em;
     margin-top: 10px;
   }
+
+  .a-propos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contenu-texte {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .contenu-image {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  .contenu-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .contenu-texte p {
+    text-align: justify;
+  }
+  
   
   

@@ -8,12 +8,57 @@ body {
 nav {
   background-color: #004466;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-left {
+  display: flex;
+}
+
+.nav-right {
+  display: flex;
 }
 
 nav a {
   color: white;
   margin-right: 15px;
   text-decoration: none;
+}
+
+
+/* Icônes réseaux sociaux */
+.social-icon {
+  font-size: 1.2em;
+  margin-left: 15px; /* Espacement entre les icônes */
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  
+  .nav-left, .nav-right {
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  nav a {
+    margin: 0 8px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+  }
 }
 
 h1, h2 {

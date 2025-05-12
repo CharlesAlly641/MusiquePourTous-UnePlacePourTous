@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <title>Accueil - Projets d'inclusion</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></head>
 <body>
   <header class="banniere">
     <h1>Nathalie Leroux, Une place pour tous / Musique pour tous</h1>
@@ -33,5 +31,103 @@
     <h1>Bienvenue sur le site de Nathalie Leroux</h1>
     <p>Découvrez son parcours, ses projets et son engagement en inclusion.</p>
   </header>
+  
+<!-- Diaporama -->
+<section class="diaporama">
+  <div class="diaporama-container" id="diaporamaContainer"></div>
+  <div class="diaporama-nav">
+    <button class="diaporama-prev">&#10094;</button>
+    <button class="diaporama-next">&#10095;</button>
+  </div>
+  <div class="diaporama-indicators" id="diaporamaIndicators"></div>
+</section>
+
+  <script>
+     const images = [
+      { src: 'photos/piano.jpg', caption: 'La Tente d\'Apaisement' },
+      { src: 'photos/piano2.webp', caption: 'Nathalie Leroux et Xavier, qui a un trouble du spectre de l’autisme.' },
+      { src: 'photos/tente.jpg', caption: 'La Tente d\'Apaisement' },
+      { src: 'photos/tente2.jpg', caption: 'La Tente d\'Apaisement' }
+    ];const container = document.getElementById('diaporamaContainer');
+    const indicatorsContainer = document.getElementById('diaporamaIndicators');
+    const prevBtn = document.querySelector('.diaporama-prev');
+    const nextBtn = document.querySelector('.diaporama-next');
+    
+    let currentIndex = 0;
+    let slideInterval;
+
+    // Charger les images dans le diaporama
+    function loadImages() {
+      images.forEach((image, index) => {
+        // Créer la slide
+        const slide = document.createElement('div');
+        slide.className = 'diaporama-slide';
+        slide.innerHTML = `
+          <img src="${image.src}" alt="${image.caption}">
+          <div class="diaporama-caption">${image.caption}</div>
+        `;
+        container.appendChild(slide);
+        
+        // Créer les indicateurs
+        const indicator = document.createElement('span');
+        indicator.className = 'diaporama-indicator';
+        indicator.dataset.index = index;
+        indicatorsContainer.appendChild(indicator);
+      });
+      
+      // Activer le premier indicateur
+      document.querySelector('.diaporama-indicator').classList.add('active');
+    }
+
+    // Mettre à jour la position du diaporama
+    function updateSlider() {
+      container.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Mettre à jour les indicateurs
+      document.querySelectorAll('.diaporama-indicator').forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    // Défilement automatique
+    function startAutoScroll() {
+      slideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+      }, 5000); // Change toutes les 5 secondes
+    }
+
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', function() {
+      loadImages();
+      startAutoScroll();
+      
+      // Bouton suivant
+      nextBtn.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+        startAutoScroll();
+      });
+      
+      // Bouton précédent
+      prevBtn.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider();
+        startAutoScroll();
+      });
+      
+      // Cliquer sur les indicateurs
+      document.querySelectorAll('.diaporama-indicator').forEach(indicator => {
+        indicator.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          currentIndex = parseInt(indicator.dataset.index);
+          updateSlider();
+          startAutoScroll();
+        });
+      });
+    });
+  </script>
 </body>
 </html>

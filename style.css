@@ -5,6 +5,7 @@ body {
   color: #333;
 }
 
+/* Permet de gérer la navigation */
 nav {
   background-color: #004466;
   padding: 10px;
@@ -61,6 +62,7 @@ nav a {
   }
 }
 
+/* Bannière */
 h1, h2 {
   color: #000000;
 }
@@ -89,6 +91,7 @@ h1, h2 {
   margin-top: 10px;
 }
 
+/* Section À propos */
 .a-propos {
   display: flex;
   align-items: flex-start;
@@ -110,7 +113,7 @@ h1, h2 {
 }
 
 .contenu-image img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -120,6 +123,7 @@ h1, h2 {
   text-align: justify;
 }
 
+/* Section Contact */
 .contact {
   display: flex;
   align-items: flex-start;
@@ -147,6 +151,7 @@ h1, h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Section Projet */
 .projet-section {
   display: flex;
   align-items: flex-start;
@@ -184,7 +189,7 @@ h1, h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Nouveau style pour la section diaporama avec citations */
+/* Section Accueil */
 .diaporama-section {
   display: flex;
   align-items: center;
@@ -337,7 +342,7 @@ h1, h2 {
   }
 }
 
-/* Section Articles */
+/* Section Articles de la page d'accueil*/
 .articles-section {
   padding: 60px 20px;
   background-color: #f8f9fa;

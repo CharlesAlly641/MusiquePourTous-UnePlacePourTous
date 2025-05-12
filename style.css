@@ -1,109 +1,107 @@
 body {
-  background-color: #ffffff; /* Un gris très pâle bleuâtre, doux pour les yeux */
+  background-color: #ffffff;
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
-  
-  nav {
-    background-color: #004466;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-  }
-  
-  h1, h2 {
-    color: #000000;
-  }
+nav {
+  background-color: #004466;
+  padding: 10px;
+}
 
-  .banniere h1 {
-    color: #ffffff; /* Par exemple, une couleur jaune pour le nom dans la bannière */
-  }
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
 
-  .banniere {
-    background-image: url("banniere.jfif"); /* Remplace par ton image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .banniere h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  
-  .banniere p {
-    font-size: 1.2em;
-    margin-top: 10px;
-  }
+h1, h2 {
+  color: #000000;
+}
 
-  .a-propos {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px 20px;
-    flex-wrap: wrap;
-  }
-  
-  .contenu-texte {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  .contenu-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-  }
-  
-  .contenu-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+.banniere h1 {
+  color: #ffffff;
+}
 
-  .contenu-texte p {
-    text-align: justify;
-  }
+.banniere {
+  background-image: url("banniere.jfif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .contact {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px 20px;
-    flex-wrap: wrap;
-  }
-  
-  .contact .contenu-texte {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  .contact .contenu-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-  }
-  
-  .contact .contenu-image img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+.banniere h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
 
-  /* Style de base pour toutes les sections de projet */
+.banniere p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.a-propos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.contenu-texte {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contenu-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.contenu-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contenu-texte p {
+  text-align: justify;
+}
+
+.contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.contact .contenu-texte {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact .contenu-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.contact .contenu-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .projet-section {
   display: flex;
   align-items: flex-start;
@@ -113,7 +111,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Image à droite (par défaut) */
 .projet-section .contenu-texte {
   order: 1;
   flex: 1;
@@ -127,7 +124,6 @@ body {
   text-align: center;
 }
 
-/* Image à gauche (pour les sections paires) */
 .projet-section.image-gauche .contenu-texte {
   order: 2;
 }
@@ -136,19 +132,54 @@ body {
   order: 1;
 }
 
-/* Style commun des images */
 .projet-section .contenu-image img {
   max-width: 90%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Nouveau style pour la section diaporama avec citations */
+.diaporama-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.diaporama-container-wrapper {
+  flex: 2;
+}
+
+.citation {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.citation blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #004466;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.citation footer {
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* Styles du diaporama */
 .diaporama {
   position: relative;
   max-width: 600px;
-  height: 400px; /* Hauteur fixe pour le conteneur */
-  margin: 40px auto;
+  height: 400px;
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -157,16 +188,16 @@ body {
 .diaporama-container {
   display: flex;
   transition: transform 0.5s ease;
-  height: 100%; /* Prend toute la hauteur du parent */
+  height: 100%;
 }
 
 .diaporama-slide {
   min-width: 100%;
   position: relative;
-  display: flex; /* Nouveau */
-  align-items: center; /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  background: #004466; /* Couleur de fond si l'image est plus petite */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #004466;
 }
 
 .diaporama img {
@@ -175,7 +206,7 @@ body {
   width: auto;
   height: auto;
   display: block;
-  object-fit: contain; /* Conserve le ratio sans déformation */
+  object-fit: contain;
 }
 
 .diaporama-caption {
@@ -187,7 +218,7 @@ body {
   color: white;
   padding: 15px;
   text-align: center;
-  z-index: 5; /* Doit être inférieur à celui des indicateurs */
+  z-index: 5;
 }
 
 .diaporama-nav {
@@ -218,7 +249,7 @@ body {
 
 .diaporama-indicators {
   position: absolute;
-  bottom: 60px; /* Ajustez cette valeur selon la hauteur de votre légende */
+  bottom: 60px;
   left: 0;
   right: 0;
   display: flex;
@@ -240,3 +271,115 @@ body {
   background: white;
 }
 
+/* Responsive design pour petits écrans */
+@media (max-width: 900px) {
+  .diaporama-section {
+    flex-direction: column;
+  }
+  
+  .citation {
+    order: -1;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .citation-droite {
+    order: 1;
+  }
+  
+  .diaporama-container-wrapper {
+    width: 100%;
+  }
+}
+
+/* Section Articles */
+.articles-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.articles-section h2 {
+  color: #004466;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-card {
+  flex: 1 1 calc(33.333% - 60px); /* 3 cartes par ligne avec espacement */
+  min-width: 300px; /* Largeur minimale pour chaque carte */
+  max-width: 350px; /* Largeur maximale pour chaque carte */
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive pour les articles */
+@media (max-width: 1024px) {
+  .article-card {
+    flex: 1 1 calc(50% - 60px); /* 2 cartes par ligne sur tablettes */
+  }
+}
+
+@media (max-width: 768px) {
+  .articles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .article-card {
+    width: 100%;
+    max-width: 350px;
+    flex: 1 1 auto;
+  }
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.article-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.article-content h3 {
+  color: #004466;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.article-source {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}

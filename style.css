@@ -72,7 +72,7 @@ h1, h2 {
 }
 
 .banniere {
-  background-image: url("banniere.jfif");
+  background-image: url("Images/banniere.jfif");
   background-size: cover;
   background-position: center;
   color: white;

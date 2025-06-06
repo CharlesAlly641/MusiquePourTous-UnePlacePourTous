@@ -145,7 +145,7 @@ h1, h2 {
 }
 
 .contact .contenu-image img {
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -184,6 +184,36 @@ h1, h2 {
 
 .projet-section .contenu-image img {
   max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Section Service */
+.service-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.service-section .contenu-texte {
+  order: 1;
+  flex: 1;
+  min-width: 280px;
+}
+
+.service-section .contenu-image {
+  order: 2;
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.service-section .contenu-image img {
+  max-width: 40%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -433,3 +463,41 @@ h1, h2 {
   color: #666;
   font-style: italic;
 }
+
+/*Section Galerie*/
+.galerie-section {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.galerie-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #004466;
+}
+
+.galerie-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.galerie-grille img {
+  width: 100%;
+  height: 250px; /* Hauteur fixe pour miniatures */
+  object-fit: cover; /* Remplit sans déformer */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.galerie-section h3 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 30px;
+  color: #004466;
+}
+
+
+
+
